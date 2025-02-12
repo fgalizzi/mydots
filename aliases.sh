@@ -28,7 +28,8 @@ alias tksv="tmux kill-server"
 alias tl="tmux list-sessions"
 
 # my aliases
-alias zsh="zsh -l"
-alias c="source ~/.load_class.sh"
-alias nvim="~/opt/nvim/nvim"
-alias aliases="cat ~/mydots/aliases.sh"
+alias zsh="zsh -l"                          # Use zsh
+alias c="source ~/.load_class.sh"           # Open pds-ana class session
+alias nvim="~/opt/nvim/nvim"                # Launch neovim
+alias nivm="nvim"                           # In case of mispelling
+alias aliases="cat ~/mydots/aliases.sh"     # Show my aliases
