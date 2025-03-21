@@ -23,6 +23,7 @@ alias tree='tree --dirsfirst'
 # TMUX
 alias ta="tmux attach -t"
 alias taa="tmux attach"
+alias tkpa="tmux kill-pane -t"
 alias tkss="tmux kill-session -t"
 alias tksv="tmux kill-server"
 alias tl="tmux list-sessions"
