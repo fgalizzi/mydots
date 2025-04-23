@@ -35,3 +35,4 @@ alias c="source ~/.load_class.sh"           # Open pds-ana class session
 alias nvim="~/opt/nvim/nvim"                # Launch neovim
 alias nivm="nvim"                           # In case of mispelling
 alias aliases="cat ~/mydots/aliases.sh"     # Show my aliases
+alias killallprocess="kill -9 `jobs -ps`"   # Kill all process stopped
