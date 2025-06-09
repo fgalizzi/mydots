@@ -34,3 +34,4 @@ alias c="source ~/.load_class.sh"           # Open pds-ana class session
 alias nvim="~/opt/nvim/nvim"                # Launch neovim
 alias nivm="nvim"                           # In case of mispelling
 alias aliases="cat ~/mydots/aliases.sh"     # Show my aliases
+alias functions="cat ~/mydots/functions.sh" # Show my functions
