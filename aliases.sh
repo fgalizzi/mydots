@@ -37,3 +37,4 @@ alias nivm="nvim"                           # In case of mispelling
 alias aliases="cat ~/mydots/aliases.sh"     # Show my aliases
 alias killallprocess="kill -9 `jobs -ps`"   # Kill all process stopped
 alias functions="cat ~/mydots/functions.sh" # Show my functions
+alias rebash="source ~/.bashrc"             # Reload bashrc
