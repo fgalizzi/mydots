@@ -37,4 +37,5 @@ alias nivm="nvim"                           # In case of mispelling
 alias aliases="cat ~/mydots/aliases.sh"     # Show my aliases
 alias rebash="source ~/.bashrc"             # Resource .bashrc
 alias killallprocess="kill -9 `jobs -ps`"   # Kill all process stopped
+alias functions="cat ~/mydots/functions.sh" # Show my functions
 alias sourceenv="source env/bin/activate"   # Source python virtual env
