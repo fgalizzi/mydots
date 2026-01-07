@@ -17,3 +17,12 @@ nfiles() {
     ls "$1" | wc -l
 }
 
+# Open a ROOT file and a TBrowser with my custom settings
+nt() {
+  eval 'root $1 -e "nt()" '
+}
+
+# Open a ROOT file and a TBrowser with default settings
+ntt() {
+  eval 'root $1 -e "new TBrowser(\"\", \"\", 1200, 900)" '
+}
