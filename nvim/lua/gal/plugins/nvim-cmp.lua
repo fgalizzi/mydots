@@ -41,7 +41,7 @@ return {
     -- CPP
     luasnip.add_snippets("cpp", {
       s("out", {
-        t('std::cout << '), i(1), t(' std::endl;'),
+        t('std::cout << '), i(1), t(' << std::endl;'),
       })
     })
 
