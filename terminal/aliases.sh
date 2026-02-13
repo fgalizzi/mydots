@@ -13,6 +13,8 @@ alias la1='la -1'                        # Show dotfiles, one per line
 alias ll='ls -l'                                      # Long listing format
 alias lla='ll --almost-all --group-directories-first' # Long with dofiles, dirs first
 
+alias lst="ls -lhtr"                     # Long listing, human-readable sizes, sorted by time, oldest first
+
 # grep
 alias grep='grep --color=auto --exclude-dir=.git --exclude=tags --exclude=*.swp --exclude-dir=vendor'
 alias cgrep='grep --color=always'
