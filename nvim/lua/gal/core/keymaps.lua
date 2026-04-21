@@ -47,6 +47,14 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window", remap = tr
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
+-- Accept typos in saving and quitting
+vim.cmd([[
+  cnoremap Wq wq
+  cnoremap WQ wq
+  cnoremap W  w
+  cnoremap Q  q
+]])
+
 -- Better order for wide menu
 vim.cmd([[
   cnoremap <expr> <Up>    pumvisible() ? "\<Left>"  : "\<Up>"
