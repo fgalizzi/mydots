@@ -47,12 +47,14 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window", remap = tr
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
--- Accept typos in saving and quitting
+-- Accept typos in saving, quitting and changing files
 vim.cmd([[
   cnoremap Wq wq
   cnoremap WQ wq
   cnoremap W  w
   cnoremap Q  q
+  cnoremap E  e
+  cnoremap B  b
 ]])
 
 -- Better order for wide menu
