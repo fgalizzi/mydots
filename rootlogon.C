@@ -6,7 +6,8 @@
 
 //Open a new TBrowser with nice settings
 void nt(){
-  gStyle->SetOptFit(1111); gStyle->SetOptTitle(0);
+  gStyle->SetOptFit(1111);
+  // gStyle->SetOptTitle(0);
   gStyle->SetStatX(0.89); gStyle->SetStatY(0.89);
   gStyle->SetOptStat(1110);
   // gStyle->SetStatW(0.2); gStyle->SetStatH(0.2);
