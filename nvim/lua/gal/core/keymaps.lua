@@ -49,13 +49,13 @@ vim.keymap.set("v", ">", ">gv")
 
 -- Accept typos in saving, quitting and changing files
 vim.cmd([[
-  cnoremap Wq wq
-  cnoremap WQ wq
-  cnoremap W  w
-  cnoremap Q  q
-  cnoremap E  e
-  cnoremap B  b
-]])
+  cabbrev W  w
+    cabbrev Q  q
+    cabbrev Wq wq
+    cabbrev WQ wq
+    cabbrev E  e
+    cabbrev B  b
+  ]])
 
 -- Better order for wide menu
 vim.cmd([[
