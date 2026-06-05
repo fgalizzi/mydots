@@ -64,3 +64,10 @@ vim.cmd([[
   cnoremap <expr> <Left>  pumvisible() ? "\<Up>"    : "\<Left>"
   cnoremap <expr> <Right> pumvisible() ? "\<Down>"  : "\<Right>"
 ]])
+
+-- Better up/down when wrapped
+vim.keymap.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
+vim.keymap.set({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
+vim.keymap.set({ "n", "x" }, "<Down>", "v:count == 0 ? 'gj' : 'j'", { desc = "Down", expr = true, silent = true })
+vim.keymap.set({ "n", "x" }, "<Up>", "v:count == 0 ? 'gk' : 'k'", { desc = "Up", expr = true, silent = true })
+vim.keymap.set("n", "^", "g^")
