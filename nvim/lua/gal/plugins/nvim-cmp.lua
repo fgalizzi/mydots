@@ -29,7 +29,6 @@ return {
     require("luasnip").setup({
       update_events = "TextChangedI"
     })
-    
 
     -- MY SNIPPETS 
     local s = luasnip.snippet
@@ -38,6 +37,113 @@ return {
     local extras = require("luasnip.extras")
     local rep = extras.rep
 
+    -- LaTeX
+    luasnip.add_snippets("tex", {
+      s("figref", {
+        t('Fig.~\\ref{fig:'), i(1), t('}'),
+      })
+    })
+
+    luasnip.add_snippets("tex", {
+      s("fiigref", {
+        t('Figure~\\ref{fig:'), i(1), t('}'),
+      })
+    })
+
+    luasnip.add_snippets("tex", {
+      s("tabref", {
+        t('Tab.~\\ref{tab:'), i(1), t('}'),
+      })
+    })
+
+    luasnip.add_snippets("tex", {
+      s("taabref", {
+        t('Table~\\ref{tab:'), i(1), t('}'),
+      })
+    })
+
+    luasnip.add_snippets("tex", {
+      s("eqref", {
+        t('Eq.~\\ref{eq:'), i(1), t('}'),
+      })
+    })
+
+    luasnip.add_snippets("tex", {
+      s("eeqref", {
+        t('Equation~\\ref{eq:'), i(1), t('}'),
+      })
+    })
+
+    luasnip.add_snippets("tex", {
+      s("secref", {
+        t('Sec.~\\ref{sec:'), i(1), t('}'),
+      })
+    })
+
+    luasnip.add_snippets("tex", {
+      s("seecref", {
+        t('Section~\\ref{sec:'), i(1), t('}'),
+      })
+    })
+
+    luasnip.add_snippets("tex", {
+      s("cite", {
+        t('~\\cite{'), i(1), t('}'),
+      })
+    })
+
+    luasnip.add_snippets("tex", {
+      s("mtheta", {
+        t('\\theta_{'), i(1), t('}'),
+      })
+    })
+
+    luasnip.add_snippets("tex", {
+      s("mmass", {
+        t('m^2_{'), i(1), t('}'),
+      })
+    })
+
+    luasnip.add_snippets("tex", {
+      s("gls", {
+        t('\\gls{'), i(1), t('}'),
+      })
+    })
+
+    luasnip.add_snippets("tex", {
+      s("qty", {
+        t('\\SI{'), i(1), t('}{}'),
+      })
+    })
+
+    luasnip.add_snippets("tex", {
+      s("subsec", {
+        t('\\subsection{'), i(1), t('}\\label{subsec:}'),
+      })
+    })
+
+    luasnip.add_snippets("tex", {
+      s("quotes", {
+        t('``'), i(1), t('\'\''),
+      })
+    })
+
+    luasnip.add_snippets("tex", {
+      s("figures", {
+        t({'\\begin{figure}','  \\begin{center}'}),
+        t({'','    \\includegraphics[width=0.45\\textwidth]{./figures}'}),
+        t({'','    \\includegraphics[width=0.45\\textwidth]{./figures}'}),
+        t({'','  \\end{center}'}),
+        t({'','  \\caption{}\\label{fig:}'}),
+        t({'','\\end{figure}'}),
+      })
+    })
+
+    luasnip.add_snippets("tex", {
+      s("npe", {
+        i(1), t('\\,\\gls{pe}'),
+      })
+    })
     -- CPP
     luasnip.add_snippets("cpp", {
       s("out", {
@@ -98,7 +204,13 @@ return {
       sources = cmp.config.sources({
         { name = "nvim_lsp"}, --lsp completion
         { name = "luasnip" }, -- snippets
-        { name = "buffer" }, -- text within current buffer
+        { name = "buffer",
+          option = {
+            get_bufnrs = function()
+              return vim.api.nvim_list_bufs()
+            end,
+          },
+        }, -- text within current buffer
         { name = "path" }, -- file system paths
       }),
 
